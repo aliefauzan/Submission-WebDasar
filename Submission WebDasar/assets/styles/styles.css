@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    z-index: 10;
+}
+
+header .logo h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+main{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 25px;
+}
+
+.banner {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+.banner img {
+    max-height: 470px; /* Sesuaikan dengan kebutuhan */
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.banner-utama {
+    position: absolute;
+    top: 80%; /* Memindahkan ke tengah vertikal */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Memindahkan ke tengah horizontal */
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px calc(10vw + 20px); /* Adjusts padding based on viewport width */
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden; /* Mencegah konten meluap */
+}
+
+.banner-utama h2 {
+    font-size: 2vw;
+    color: #333;
+}
+
+.services-title {
+    position: absolute; /* Agar elemen tetap berada dalam alur dokumen */
+    z-index: 10; /* Tingkatkan z-index agar elemen ini berada di atas .services */
+}
+
+.services {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    background-color: #a7c1f1;
+    flex-wrap: wrap;
+    position: relative; /* Pastikan elemen ini tidak menimpa .services-title */
+    z-index: 1; /* Pastikan z-index lebih rendah dari .services-title */
+}
+
+section .services{
+    position: flex;
+}
+
+.service-item {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.service-item img {
+    width: 150px;
+    height: 150px;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Mencegah konten meluap */
+    object-fit: cover;
+    object-position: center;
+    
+
+}
+
+.service-item h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+#body-check {
+    display: flex;
+    justify-content:  center;
+    padding: 20px;
+    background-color: #eef;
+    border-radius: 8px;
+    gap: 2rem;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-container label {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.form-container input,
+.form-container select,
+button#submit {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #a7c1f1;
+    color: white;
+    font-size: 1rem;
+    width: 200px;
+}
+
+.result {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #a7c1f1;
+    text-align: center;
+}
+
+.result h2,
+.result p {
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+}
+
+footer p {
+    color: #666;
+}
+
+#content{
+    flex: 5;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+}
+
+@media screen and (max-width: 1200px) {
+    main {
+      flex-flow: column nowrap;
+    }
+  }
+
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        justify-content: center;
+      }
+
+    }
+
+    @media screen and (max-width: 1200px) {
+        main {
+            flex-flow: column nowrap;
+          }
+      
+        header .logo h1{
+            font-size: 3vw;
+        }
+        nav ul li a{
+            font-size: 2vw;
+
+        }
+        .banner-utama {
+            padding: 10px calc(8vw + 20px);
+        }
+        .banner-utama h2 {
+            font-size: 2vw; /* Slightly larger font for medium screens */
+        }
+    }
+    
+    @media screen and (max-width: 768px) {
+        header .logo h1{
+            font-size: 3vw;
+        }
+        nav ul li a{
+            font-size: 3vw;
+
+        }
+        .banner-utama {
+            padding: 10px calc(6vw + 10px);
+        }
+    }
+    
+    @media screen and (max-width: 480px) {
+        .banner-utama {
+            padding: 10px calc(4vw + 10px);
+        }
+    }
