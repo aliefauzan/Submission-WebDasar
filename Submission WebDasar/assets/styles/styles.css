@@ -208,6 +208,10 @@ aside figcaption {
     text-align: center;
 }
 
+.form-container{
+    padding: 20px;
+}
+
 footer {
     text-align: center;
     padding: 20px;
@@ -282,7 +286,7 @@ footer p {
     }
 
     .banner-utama h2 {
-        font-size: 3vw;
+        font-size: 2vw;
     }
 
     .services {
